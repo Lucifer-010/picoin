@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-import os
+import os,dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-k(f%n)hn^2yvvsz^p5y2u18i*5=y45#pia4l=o_&%w6^4ygq0g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["minepi-qvmw.onrender.com",'localhost','127.0.0.1']
+RENDER_EXTERNAL_HOSTNAME = 'subgraph-implementation.onrender.com'
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 
 # Application definition
@@ -123,3 +126,4 @@ STATIC_ROOT = BASE_DIR/"staticfiles"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+CSRF_TRUSTED_ORIGINS = ["https://minepi-qvmw.onrender.com"]
