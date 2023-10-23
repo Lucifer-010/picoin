@@ -1,0 +1,1045 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src={% static 'jquery.js' %}></script>
+    <link rel="icon" type="image/x-icon" href={% static 'img/logo.png' %}>
+    <link rel="stylesheet" href={% static 'bootstrap.css' %}>
+    <link rel="stylesheet" href={% static 'styler.css' %}>
+    <link rel="stylesheet" href={% static 'font-awesome-legacy.min.css' %}>
+    <script src={% static 'awesome-icon.js' %} crossorigin="anonymous"></script>
+    <title>Piblockchain Network</title>
+</head>
+
+<div id="bheader" >
+    <img id="logo" src={% static 'img/logo.webp' %} >
+    <space></space>
+
+    <div id="section_links" >
+        <div class="smd" >
+	        <span class="smbtn uh" >
+		        <span>Pi Blockchain</span>
+		        <span class=sarw ><i class="fa-light fa-chevron-down"></i></span>
+	        </span>
+	        
+        	<div class="sdd">
+				<a href="index.html">Pi Node</a>
+				<a href="index.html">Pi Explorer</a>
+				<a href="index.html">Pi Whitepaper</a>
+        	</div>
+        </div>
+        
+        <div class="smd" >
+	        <span class="smbtn uh" >
+		        <span>Developers</span>
+		        <span class=sarw ><i class="fa-light fa-chevron-down"></i></span>
+	        </span>
+	        
+        	<div class="sdd">
+				<a href="index.html">New Developers</a>
+				<a href="index.html">Why Build a Pi</a>
+				<a href="index.html">Pi Hackathon</a>
+				<a href="index.html">Developer Ambassador</a>  				
+        	</div>
+        </div>
+        
+        <a>About us</a>
+        <a>Blog</a>
+        <a>Support</a>
+    </div>
+
+    <span class="slayout">
+        <div class="socials">
+            <a href="https://twitter.com/PiCoreTeam" style="color:var(--st);"><i class="fa-brands fa-twitter"></i></a>
+            <a href ="https://www.facebook.com/PiCoreTeam/" style="color:var(--st);"><i class="fa-brands fa-facebook"></i></a>
+            <a href ="https://www.youtube.com/c/PiCoreTeam" style="color:var(--st);"><i class="fa-brands fa-youtube"></i></a>
+            <a href ="https://www.instagram.com/pi_network/" style="color:var(--st);"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <span id=searchbtn style="font-size: 1.2em; color: #eee;">
+            <i class="fa-light fa-magnifying-glass"></i>
+        </span>
+    </span>
+
+</div>
+
+<div id="header" >
+    <img id="logo" src={% static 'img/logo.webp' %} >
+    <space></space>
+    <span class="layout">
+        <span id=searchbtn style="font-size: 1.2em; color: #eee;">
+            <i class="fa-light fa-magnifying-glass"></i>
+        </span>
+        <!-- <span style="font-size: 1.2em; color: #eee;">
+            <i class="fa-light fa-bars"></i>
+        </span> -->
+        <label id=mb for="check">
+            <input type="checkbox" id="check"/> 
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </span>
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-search" viewBox="0 0 16 16">
+        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+    </svg> -->
+    
+    <!-- <i class="bi bi-search"></i> -->
+</div>
+
+<div id="sbbg" >
+    <div id=mm >
+        <a class=hua href="/pi/validate" >Validate wallet</a>
+        <div class="md" >
+	        <span class=mbtn >
+		        <span>Pi Blockchain</span>
+		        <span class=arw ><i class="fa-light fa-chevron-up"></i></span>
+	        </span>
+	        
+        	<div class="dd">
+				<a>Pi Node</a>
+				<a>Pi Explorer</a>
+				<a>Pi Whitepaper</a>
+        	</div>
+        </div>
+        
+        <div class="md" >
+	        <span class=mbtn >
+		        <span>Developers</span>
+		        <span class=arw ><i class="fa-light fa-chevron-up"></i></span>
+	        </span>
+	        
+        	<div class="dd">
+				<a>New Developer</a>
+				<a>Why Build a Pi</a>
+				<a>Pi Hackathon</a>
+				<a>Developer Ambassador</a>  				
+        	</div>
+        </div>
+        
+        <a>About us</a>
+        <a>Blog</a>
+        <a>Support</a>
+    </div>
+    
+    <div class="socials">
+    	<a href="https://twitter.com/PiCoreTeam" style="color:var(--st);"><i class="fa-brands fa-twitter"></i></a>
+    	<a href ="https://www.facebook.com/PiCoreTeam/" style="color:var(--st);"><i class="fa-brands fa-facebook"></i></a>
+    	<a href ="https://www.youtube.com/c/PiCoreTeam" style="color:var(--st);"><i class="fa-brands fa-youtube"></i></a>
+    	<a href ="https://www.instagram.com/pi_network/" style="color:var(--st);"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+</div>
+
+<div id="searchfield" >
+	<div>
+		<input placeholder="search" >
+		<span id=sexit >x</span>
+	</div>
+</div>
+
+
+<div id="floater" >
+	<div class="head">Pi Network</div>
+	<div class="text">Start mining easily</div>
+</div>
+
+<div id="first_banner">
+	<div id="ibanner" >
+		<div><img src={% static 'img/logo.png' %}></div>
+        <div><img src={% static 'img/logo.png' %}></div>
+
+        <div><img src={% static 'img/logo.png' %}></div>
+	</div>
+    <div id="fssect" >
+        <div class="fssect" >
+            <div class="first_banner_text" >The First Digital Currency You Can Mine On Your Phone</div>
+            <div class="stext" >Start mining Pi cryptocurrency today with our free, energy-light mobile app!</div>
+            <div class="btn" >
+                <span onclick="location='{% url 'validate' %}'" >Validate wallet</span>
+                <span><i class="fa-light fa-arrow-right"></i></span>
+            </div>
+            <iframe src="https://youtube.com/embed/MsOaC61cR3U" ></iframe>
+        </div>
+        <div class="fssect" >
+            <a href="https://www.youtube-nocookie.com/watch?v=MsOaC61cR3U">
+                <img src={% static 'img/pi_video-6.webp' %}>
+            </a>
+        </div>
+    </div>
+</div>
+<div id="tbanner" >
+	Mining crypto is hard.<br>
+	Investing in crypto is risky.<br>
+	Too many of us are left out of the cryptocurrency revolution…
+</div>
+<!-- <svg class="svg" aria-hidden="true" fill="var(--tc)" viewBox="0 0 600 300" preserveAspectRatio="none">
+  <path d="M 1000 645 l 0 -579
+  		   c -15 -36 -110 135 -415 164
+  		   c -200.64 28.35 -140 -32 -232 -31
+  		   c -50 1 -142 53 -229 80
+  		   c -65.54 20.34 -101 15 -126 11.61
+  		   v 59.39 z"></path>
+<!- 
+  <path d="M 1000 286 l 2 -252 c -157 -43 -302 144 -405 178 c -101.11 33.38 -159 -47 -242 -46 c -80 1 -145.09 54.07 -229 87 c -65.21 25.59 -104.07 16.72 -126 10.61 v 22.39 z"></path>
+  <path d="M 1000 300 l 1 -230.29 c -217 -12.71 -300.47 129.15 -404 156.29 c -103 27 -174 -30 -257 -29 c -80 1 -130.09 37.07 -214 70 c -61.23 24 -108 15.61 -126 10.61 v 22.39 z"></path>->
+</svg> 
+-->
+
+<!-- REAL -->
+<!-- <svg class="bgs" width="1406" height="300" viewBox="0 55 576 95" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 3H576V37.8506C576 37.8506 476.729 67.2912 422 53.4368C367.271 39.5824 272 75 252 79C232 83 204 82.1473 134 65.5594C64 48.9715 0 95 0 95V3Z" fill="#8B5C9B"/>
+    <path d="M0 0H576V34.8506C576 34.8506 476.729 64.2912 422 50.4368C367.271 36.5824 272 72 252 76C232 80 204 79.1473 134 62.5594C64 45.9715 0 92 0 92V0Z" fill="#783A8D"/>
+</svg>
+
+<svg class="sgs" width="100%" height="100" viewBox="0 55 576 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 3H576V37.8506C576 37.8506 476.729 67.2912 422 53.4368C367.271 39.5824 272 75 252 79C232 83 204 82.1473 134 65.5594C64 48.9715 0 95 0 95V3Z" fill="#8B5C9B"/>
+    <path d="M0 0H576V34.8506C576 34.8506 476.729 64.2912 422 50.4368C367.271 36.5824 272 72 252 76C232 80 204 79.1473 134 62.5594C64 45.9715 0 92 0 92V0Z" fill="#783A8D"/>
+</svg> -->
+
+
+<!-- <path xmlns="http://www.w3.org/2000/svg" d="M0 0H576V142.851C576 142.851 476.729 172.291 422 158.437C367.271 144.582 260 184.414 260 184.414C260 184.414 204 187.147 134 170.559C64 153.972 0 200 0 200V0Z" fill="#783A8D"/> -->
+
+<div class=section >
+	<div class="img" style="background-image:url({% static 'img/piCo.jpg' %}), url({% static 'img/256-1.webp' %}), url('img/25-1-10x12.webp')" ></div>
+    <div class="ssection" >
+        <div class="head">Pi makes crypto mining easy.</div>
+        <div class="text">Breakthrough tech allows you to mine Pi on your phone without draining your battery.</div>
+        <div class="btn">
+            <span>Learn the tech behind pi</span>
+            <span><i class="fa-light fa-arrow-right"></i></span>
+        </div>
+    </div>
+</div>
+
+<div id="ssect" >
+    <div class="sect">
+        <img src={% static 'img/Decentralize.jpg' %}>
+        <h3>Decentralized</h3>
+        <p>Secure, Immutable, non-counterfeitable and interoperable digital money.</p>
+    </div>
+
+    <div class="sect">
+        <img src={% static 'img/Mf.jpg' %}>
+        <h3>Mobile First</h3>
+        <p>Works on your mobile phone and does not drain your battery.</p>
+    </div>
+
+    <div class="sect">
+        <img src={% static 'img/Upf.jpg' %}>
+        <h3>User & Planet-friendly</h3>
+        <p>Easy to use, secure at scale, without the massive electrical waste.</p>
+    </div>
+</div>
+
+<div id="lbanner">
+    <div id="last_section" >
+        <img id="geoimg" src={% static 'img/geopi.webp' %} >
+        <div class="last_section" >
+            <div class="head">Download the mobile app to start mining today! Join now.</div>
+            <div class="text">Keep your money! Mining Pi is free. All you need is an invitation from an existing trusted member on the network. If you have an invitation you can download the mobile app below.</div>
+            <img src={% static 'img/google_play.webp' %}>
+            <img src={% static 'img/apple_store.webp' %}>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <div id="first_section">
+        <div class="first_section">
+            <div class="first_section_link">Pi Whitepaper</div>
+            <div class="first_section_link">Support & FAQ</div>
+            <div class="first_section_link">Terms of Service</div>
+        </div>
+        <div class="first_section">
+            <div class="first_section_link">Privacy Policy</div>
+            <div class="first_section_link">Developer Terms of Use</div>
+            <div class="first_section_link">Pi Trademark</div>
+        </div>
+        <div style="flex:1.2">&nbsp;</div>
+        <img src={% static 'img/logo.webp' %} >
+    </div>
+
+	<div class="first_section_link" >© 2023 Piblockchainnet</div>
+	<br>
+</div>
+<style>
+#section_links{
+    display: flex;
+    flex:1.5;
+    justify-content: center;
+}
+#section_links *{
+    color:var(--st);
+}
+#section_links > *{
+    margin-right:1.5em;
+}
+
+#section_links a:hover{
+    cursor:pointer;
+}
+
+#section_links .sdd{
+    display: none;
+    position:absolute;
+    background:#fff;
+    padding:1em 2em 1em 1em;
+    border-radius:0.5em;
+    margin-top:0.1em;
+}
+.sdd a{
+    display:inline-block;
+}
+.smd *{
+    /* background:#ff0; */
+    cursor:pointer;
+}
+.smd:hover{
+    color:#f00;
+}
+
+#section_links .smd:hover .sdd{
+    display: block;
+    /* background:#f00; */
+}
+
+#section_links .sdd a{
+    color:#555;
+    padding:0.1em 0.5em;
+    display:block;
+    white-space: nowrap;
+}
+
+.smbtn{
+    /* display:flex;
+    flex-direction: row;
+    justify-content: space-around; */
+    /* justify-content: center;
+    align-items: center; */
+    /* width:2em; */
+
+    /* white-space:nowrap; */
+}
+.smbtn *{
+    /* position:relative; */
+    width:auto;
+}
+.sarw{
+    font-size:0.8em;
+    /* display:inline-block;
+    transform: scaleY(-1); */
+}
+.slayout{
+    display:flex;
+    width:auto;
+    /* margin-right:inherit; */
+}
+.slayout *{
+    margin-right:0.5em;
+}
+#searchbtn{
+    width:1em; 
+}
+body{
+    margin:0 0%;
+}
+
+#header, #bheader{
+	position:fixed;
+	width:100%;//96%;
+	z-index:5;
+    background:#0000;//var(--mc);
+    padding:1em 15%;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    transition:0.2s all;
+}
+@media screen and (max-width:600px){
+	#header{
+	    padding:1em 5%;
+	}
+}
+#header #logo
+{
+    height:1.5em;
+    max-width:6.5em;
+    flex:1.5;
+}
+#header .layout *{
+margin-right:1em;
+}
+
+#header space{
+    display:inline-block;
+    flex:3;
+}
+#bheader{
+    padding:2em 2%; 
+    /* align-items:baseline; */
+}
+
+#bheader #logo
+{
+    height:3.2em;
+    width:auto;
+    aspect-ratio: 5/1;
+}
+#bheader > *{
+    margin-left:0.5em;
+    width:auto;
+}
+#bheader .layout *{
+margin-right:0.5em;
+}
+
+#bheader #socials{
+    display:flex;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+}
+
+#bheader space{
+    display:inline-block;
+    /* flex:1; */
+}
+
+
+#searchfield{
+position:fixed;
+width:100%;
+background:var(--tc);
+padding:1em;
+z-index:6;
+justify-content:center;
+text-align:center;
+display:none;
+}
+#searchfield div{
+display:flex;
+color:#fff;
+width:100%;
+justify-content:center;
+text-align:center;
+}
+
+#searchfield div span{
+	margin-left:-1.4em;
+	font-size:2em;
+//	background:#0002;
+	border-radius:1em;
+	flex:1;
+}
+
+#searchfield input{
+border:2px solid var(--gt);
+border-width:0 0 2px 0;
+background:#0000;
+width:110%;
+color:#fff;
+font-weight:700;
+outline:none;
+flex:4;
+margin-left:1em;
+padding:0 0.4em;
+font-size:1.1em;
+}
+
+#searchfield input::placeholder {
+  font-weight: bold;
+  color: #fff;
+}
+
+.layout{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex:1;
+}
+
+.btn{
+text-transform:capitalize;
+background:var(--sc);
+color:var(--gt);
+font-weight:600;
+padding:0.8em 1em;
+margin:0%;
+display:inline-flex;
+justify-content:space-around;
+min-width:50%;
+}
+
+.btn span:nth-child(1){
+flex:4;
+}
+
+.btn span{
+flex:1;
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+
+#sbbg{
+    background-image:linear-gradient(135deg, var(--mcbl), var(--mc));
+    height: 100vh;
+    //top:0;
+	width:100%;//96%;
+    padding:1em;
+    display:none;
+    position:fixed;
+    box-sizing:border-box;
+    z-index:4;
+}
+
+#sbbg #mm{
+    margin:40% 10% 0;
+    display: none;
+    width:100%;
+    //background:#ff0;
+}
+
+#sbbg #mm .md{
+width:100%;
+}
+
+#sbbg div a:not(.dd a), #sbbg div .md{
+    display:inline-block;
+    color:var(--st);
+    font-size:1.3em;
+    font-weight:700;
+    margin:0.3em 0;
+}
+
+.dd{
+display:none;
+}
+
+.dd a{
+margin:0.2em 0;
+white-space:nowrap;
+}
+
+.md:hover .dd{
+	/*display:block;*/
+}
+
+.md .mbtn{
+	display:flex;
+	width:200%;
+}
+
+.mbtn span{
+white-space:nowrap;
+}
+
+.md span .arw{
+transform:scaleY(-1);
+display:inline-block;
+margin-left:3em;
+transition:0.2s all;
+color:var(--st);
+}
+
+
+.md span:hover .arw{
+transform:scaleY(1);
+}
+
+#sbbg .socials *
+{
+font-size:1.2em;
+margin-right:0.5em;
+}
+
+#sbbg .socials, .dd{
+	margin:5% 10%;
+}
+
+#sbbg .socials{
+	margin:15% 10%;
+}
+
+
+#first_banner{
+background:var(--mc);
+height:110vh;
+min-height:35em;
+width:100%;
+padding:40% 0%;//2%
+box-sizing:padding-box;
+top:0;
+z-index:1;
+}
+
+#fssect{
+    position:absolute;
+    z-index: 2;
+}
+
+#first_banner .first_banner_text, #first_banner .stext{
+color:#fff;
+font-weight:1000;
+font-size:2.4em;
+z-index:2;
+padding:0 3%;
+}
+
+#first_banner .stext{
+margin:0.8em 0;
+font-size:1.2em;
+}
+
+#first_banner .btn{
+margin:0 4%;
+}
+
+iframe{
+width:100%;
+aspect-ratio:2/1.2;
+border:0px solid;
+z-index:2;
+}
+
+#first_banner iframe
+{
+padding:5% 3%;
+}
+
+.svg{
+transform:rotate(180deg);
+width:100%;
+display:inline-block;
+left:0;
+position: absolute;
+z-index:1;
+/* margin-top:-14em; */
+}
+
+.fssect img{
+    display:none;
+}
+
+#ibanner{
+top:0;
+position:absolute;
+width:100%;//96%;
+z-index:1;
+}
+
+#ibanner div{
+width:80%;
+text-align:right;
+display:flex;
+justify-content:flex-end;
+opacity:0.05;
+filter:blur(3px);
+z-index:1;
+}
+
+#ibanner div:nth-child(2){
+margin:20%;
+width:60%;
+}
+
+#ibanner div:nth-child(3){
+margin:40% 20%;
+width:60%;
+}
+
+#ibanner div:nth-child(2) img{
+height:15em;
+width:auto;
+aspect-ratio:1:1;
+}
+
+#ibanner div:nth-child(3) img{
+height:10em;
+width:auto;
+aspect-ratio:1:1;
+}
+
+#ibanner img{
+height:5em;
+width:auto;
+aspect-ratio:1:1;
+}
+
+#tbanner{
+margin:0em 0;
+color:#fff;
+font-weight:1000;
+font-size:1.3em;
+padding:5%;
+text-align:center;
+background:var(--tc);
+}
+
+.section{
+padding:0 4%;
+display:flex;
+flex-direction:column;
+margin-bottom:20%;
+}
+
+.section *{
+margin-bottom:0.5em;
+}
+
+.section .img
+{
+height:auto;
+width:100%;//90%;
+aspect-ratio:1/1;
+margin:1% 0%;
+//background-color:#f00;
+background-position:0 0;
+background-size:100% 100%;
+}
+.section .head{
+color:var(--tc);
+font-weight:700;
+font-size:3em;
+}
+.section .text{
+font-size:1.5em;
+font-weight:700;
+}
+.section .btn{
+width:80%;
+color:#fff;
+font-size:1.1em;
+}
+.section .btn *{
+margin-bottom:0em;
+}
+
+.sect{
+display:flex;
+flex-direction:column;
+box-shadow:0 7px 20px 5px #0002;
+/* min-height:15em; */
+height:auto;
+width:70%;
+aspect-ratio: 2/0.8;
+margin:10% 15%;
+justify-content:center;
+text-align:center;
+align-items:center;
+font-size:1.4em;
+padding:5%;
+border:1px solid #0002;
+border-radius:0.2em;
+}
+.sect .head{
+    font-weight:700;
+}
+.sect *{
+margin-bottom:0.2em;
+}
+.sect img{
+height:3em;
+width:auto;
+aspect-ratio:1:1;
+margin-bottom:0.5em;
+}
+.sect p{
+	color:#888;
+}
+
+#lbanner{
+background-image:linear-gradient(to right, var(--sc), var(--mc));
+text-align:center;
+padding:20% 5%;
+}
+#lbanner *{
+margin-bottom:1em;
+}
+#lbanner #geoimg{
+height:auto;
+width:60%;
+aspect-ratio:2.2:1;
+}
+
+#lbanner img:not(#geoimg){
+height:auto;//6em;
+width:95%;
+aspect-ratio:4/1;
+margin:1em 0;
+}
+
+#lbanner .head{
+color:var(--gt);
+font-weight:700;
+font-size:1.6em;
+padding:0;
+letter-spacing:0.05em;
+text-align: left;
+}
+
+#lbanner .text{
+color:#fff;
+font-size:1.2em;
+text-align: left;
+}
+
+#footer{
+	background:#252525;
+	padding:10% 5%;
+}
+#footer .first_section_link{
+	color:#C9C9C9;
+	margin:5%;
+	font-size:1.3em;
+}
+
+#footer img{
+	height:4.5em;
+}
+
+#floater{
+width:100%;
+background:#eee;
+padding:3% 5%;
+position:fixed;
+bottom:0;
+font-size:1.2em;
+z-index:3;
+border-radius:5em;
+}
+
+#floater .head{
+font-weight:700;
+}
+
+.first_section{
+    margin-bottom:10%;
+}
+
+@media screen and (min-width:600px) {
+    #first_banner{
+        padding:10% 0%;//2%
+    }
+    #first_banner .first_banner_text, #first_banner .stext{
+        /* font-size:2.4em; */
+        padding:0 15%;
+    }
+    #first_banner .btn{
+        margin:0 15%;
+    }
+    iframe{
+        width:70%;
+        margin:0 15%;
+    }
+    .section{
+    padding:0 20%;
+    }
+    .section .head, .section .text, .section .btn{
+        padding:0% 5%;
+    }
+    .section .btn{
+        padding:0.8em 1em;
+        margin-left:5%;
+    }
+    .sect{
+        font-size:1.2em;
+        padding:3%;
+        width:60%;
+        margin:5% 20%;
+        box-shadow:0 20px 50px 10px #0002;
+    }
+
+    #lbanner{
+        padding:10% 25%;
+    }
+    #lbanner #geoimg{
+        width:70%;
+    }
+    #lbanner .head{
+        font-size:1.2em;
+    }
+
+    #lbanner .text{
+        color:#fff;
+        font-size:1.1em;
+    }
+    #first_section{
+        display: flex;
+        width:100%;
+    }
+    .first_section{
+        flex:1;
+        /* min-width: 50%; */
+        margin-bottom: 0em;
+    }
+    #footer{
+        background:#252525;
+        padding:5%;
+    }
+    #footer img{
+        height:3.5em;
+   }
+    #footer .first_section_link{
+        font-size:1.1em;
+    }
+}
+
+#bheader{
+    display: none;
+}
+
+.bgs{
+        display:none;
+}
+
+@media screen and (min-width:1000px) {
+    .bgs{
+        display:inline-block;
+    }
+    .sgs{
+        display: none;
+    }
+    #bheader{
+        display:flex;
+    }
+    #header{
+        display: none;
+    }
+    #first_banner{
+        padding:8% 0%;//2%
+    }
+    #first_banner .first_banner_text{/*, #first_banner .stext{ */
+        font-size:3em;
+        padding:0 0% 0 15%;
+    }
+
+    #fssect{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+        padding:0;
+    }
+    .fssect{
+        flex:1;
+        margin-bottom: 0em;
+    }
+    .fssect img{
+        display:block;
+        /* height:100%; */
+        width:70%;
+    }
+    .section{
+        display: flex;
+        flex-direction: row-reverse;
+        margin-bottom:5%;
+        align-items: center;
+        justify-content: center;
+    }
+    #lbanner{
+        padding:10% 15%;
+    }
+    #last_section{
+        display: flex;
+        width:100%;
+        justify-content: center;
+        align-items: center;
+    }
+    #last_section #geoimg{
+        flex:0.8;
+        width:80%;
+    }
+    #last_section .last_section{
+        flex:1;
+    }
+    #ssect{
+        display:flex;
+        margin:5% 10%;
+    }
+    .sect{
+        margin:1em;
+    }
+    iframe{
+        display:none;
+    }
+    #floater{
+        width:100%;
+        background:#eee;
+        padding:2% 5%;
+    }
+}
+a:hover{
+    text-decoration: none;
+}
+a{
+    color:inherit;
+    text-decoration:none;
+}
+</style>
+<script>
+$("#searchfield input").on("keydown", function(k){
+	if(k.keyCode==13){
+		location="https://minepi.com/?s="+$(this).val();
+	}
+});
+
+$("#searchbtn, #sexit").click(function(){
+	$("#searchfield").slideToggle();
+});
+
+$(".md, #sbbg div a:not(.socials a, .dd a)").after("<br>");
+    var sb = false;
+// alert($("input[type='checkbox']").attr("checked"));
+$("#check").click(function(){
+    if(!sb){
+        $("#sbbg").fadeIn(500, function(){
+            $("#sbbg #mm").slideDown(200);
+        });
+        sb=true;
+    }
+    else{
+        $("#sbbg #mm").slideUp(500, function(){
+            $("#sbbg").fadeOut(200);
+        });
+        sb=false;
+    }
+});
+
+document.addEventListener("scroll", function(){
+	if($(document).scrollTop()>30){
+		$("#header, #bheader").css("background", "var(--tc)");
+	}
+	else
+		$("#header, #bheader").css("background", "#0000");
+		
+	//$("#searchfield").slideUp();
+});
+
+$(".md").hover(function(){
+	$(".dd", this).slideToggle();//display:block;
+},function(){
+	$(".dd", this).slideToggle();//display:block;
+});
+/*
+var ex;
+$("#section_links .smd, #section_links .smd *").hover(function(){
+    $(".sdd", this).fadeIn();//display:block;
+    // $(".sdd", this).css("display", "block");//display:block;
+    // ex = setTimeout(function(){
+    //     $(".sdd").fadeOut();//slideUp();//display:block;
+    // },5000);
+},function(){
+    // ex = setTimeout(function(){
+        $(".sdd", this).fadeOut();//slideUp();//display:block;
+    //  },100);
+});
+
+$(".sdd").hover("over", function(){
+    // alert("bluted");
+    // $(this).fadeOut();//slideUp();//display:block;
+});
+*/
+</script>
+</html>

