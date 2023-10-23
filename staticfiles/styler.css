@@ -1,0 +1,83 @@
+:root{
+    --mc:#251339;
+    --mcl:#251339ee;
+    --mcbl:#4E3577ee;
+    --sc:#8A348D;
+    --tc:#783A8D;
+    --st:#eefbfa;
+    --tt:#09e;
+    --gt:#fc0;
+}
+
+@font-face{
+src:url('Outfit-Regular.ttf');
+font-family:Or;
+}
+*{
+/* font-family:Or; */
+}
+
+label{
+ display:inline-flex;
+  flex-direction:column;
+  width:25px;
+  cursor:pointer;
+  margin:0;
+  /* transform: scale(0.7); */
+}
+label span{
+  background: #eee;
+  border-radius:10px;
+  height:2px;
+  margin: 2.5px 0;
+  transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+}
+span:nth-of-type(1){
+  margin-top:0;
+  width:50%;
+  
+}
+span:nth-of-type(2){
+  width:100%;
+}
+span:nth-of-type(3){
+  width:75%;
+ 
+}
+input[type="checkbox"]{
+  display:none;
+}
+input[type="checkbox"]:checked ~ span:nth-of-type(1){
+  transform-origin:bottom;
+  transform:rotatez(45deg) translate(8px,0px)
+}
+input[type="checkbox"]:checked ~ span:nth-of-type(2){
+  
+  transform-origin:top;
+  transform:rotatez(-45deg)
+}
+input[type="checkbox"]:checked ~ span:nth-of-type(3){ 
+  transform-origin:bottom;
+  width:50%;
+  transform: translate(9px,-5px) rotatez(45deg);
+}
+
+#sbbg div a:not(.socials a):after, #slinks > a:after, .sdd a:after, .uh:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  text-decoration:none;
+  background-color: #ddd;
+  transform: scaleX(0);
+  transform-origin: top right;
+  transition: transform 0.3s ease;
+}
+
+#sbbg div a:not(.socials a):hover:after, #slinks > a:hover:after, .sdd a:hover:after, .uh:hover:after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
