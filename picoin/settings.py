@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-k(f%n)hn^2yvvsz^p5y2u18i*5=y45#pia4l=o_&%w6^4ygq0g
 DEBUG = True
 
 ALLOWED_HOSTS = ["picoin-production.up.railway.app",'localhost','127.0.0.1']
-RENDER_EXTERNAL_HOSTNAME = 'subgraph-implementation.onrender.com'
+RENDER_EXTERNAL_HOSTNAME = 'picoin-production.up.railway.app'
 if RENDER_EXTERNAL_HOSTNAME:
     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
