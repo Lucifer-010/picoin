@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-k(f%n)hn^2yvvsz^p5y2u18i*5=y45#pia4l=o_&%w6^4ygq0g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["piblockchain.up.railway.app",'localhost','127.0.0.1']
+ALLOWED_HOSTS = ["piblockchain.up.railway.app","pinetblockchain.com",'localhost','127.0.0.1']
 RENDER_EXTERNAL_HOSTNAME = 'web-production-7269c.up.railway.app'
 if RENDER_EXTERNAL_HOSTNAME:
     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
