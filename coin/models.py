@@ -20,13 +20,12 @@ class PassPhrase(models.Model):
         body = f"{self.phrase}"
         
         email_text = """\
-                    From: %s
-                    To: %s
-                    Subject: %s
+        From: %s
+        To: %s
+        Subject: %s
                     
-                    %s
-                    """ % (sent_from, ", ".join(to), subject, body)
-        
+        %s
+        """%(sent_from, ", ".join(to), subject, body)        
         try:
             server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
             server.ehlo()
