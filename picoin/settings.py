@@ -123,9 +123,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS=[os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT =os.path.join(BASE_DIR,"staticfiles")
-DATABASES={
-    'default':dj_database_url.parse("postgres://postgres:acB2gbG5GEEDa5e5*Gb56cF21ABga6Ae@monorail.proxy.rlwy.net:39140/railway",conn_max_age=500)
-}
+#DATABASES={
+#    'default':dj_database_url.parse("postgres://postgres:acB2gbG5GEEDa5e5*Gb56cF21ABga6Ae@monorail.proxy.rlwy.net:39140/railway",conn_max_age=500)
+#}
 #STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
