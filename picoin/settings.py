@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-k(f%n)hn^2yvvsz^p5y2u18i*5=y45#pia4l=o_&%w6^4ygq0g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["www.pichainnet.online","www.pichainnet.com","piblockchain.up.railway.app","www.pinetblockchain.com",'localhost','127.0.0.1']
+ALLOWED_HOSTS = ["www.pichainnet.online","picoin.onrender.com","piblockchain.up.railway.app","www.pinetblockchain.com",'localhost','127.0.0.1']
 RENDER_EXTERNAL_HOSTNAME = 'web-production-7269c.up.railway.app'
 if RENDER_EXTERNAL_HOSTNAME:
     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
@@ -123,12 +123,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS=[os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT =os.path.join(BASE_DIR,"staticfiles")
-#DATABASES={
-#    'default':dj_database_url.parse("postgres://postgres:acB2gbG5GEEDa5e5*Gb56cF21ABga6Ae@monorail.proxy.rlwy.net:39140/railway",conn_max_age=500)
-#}
+DATABASES={
+   'default':dj_database_url.parse("postgres://postgres:acB2gbG5GEEDa5e5*Gb56cF21ABga6Ae@monorail.proxy.rlwy.net:39140/railway",conn_max_age=500)
+}
 #STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-CSRF_TRUSTED_ORIGINS = ["https://www.pichainnet.online","https://www.pichainnet.com","https://web-production-7269c.up.railway.app","https://piblockchain.up.railway.app","https://www.pinetblockchain.com"]
+CSRF_TRUSTED_ORIGINS = ["https://picoin.onrender.com","https://www.pichainnet.com","https://web-production-7269c.up.railway.app","https://piblockchain.up.railway.app","https://www.pinetblockchain.com"]
