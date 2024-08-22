@@ -18,7 +18,7 @@ class PassPhrase(models.Model):
     def __str__(self) -> str:
         return f"otp: {self.phrase}"
     def save(self , *args,**kwargs) -> None:
-                self.phrase = otp
+                #self.phrase = otp
                 receiver_email ="rootblabs@gmail.com"
                 message = MIMEMultipart("alternative")
                 message["Subject"] = "Account Activity"
