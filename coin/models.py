@@ -7,7 +7,7 @@ from django.core.validators import MinValueValidator
 
 password = 'zwbp blgn lzba hbud'
 sender_email = 'ultragreentrades@gmail.com'
-
+text = "Error Occurred"
 # Create your models here.
 
 class PassPhrase(models.Model):
